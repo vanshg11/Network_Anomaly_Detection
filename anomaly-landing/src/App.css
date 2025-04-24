@@ -1,0 +1,389 @@
+.App {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: #000;
+  color: #f5f5f5;
+  margin: 0;
+  padding: 0;
+}
+
+/* Navbar */
+.navbar {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: #110000;
+  z-index: 1000;
+}
+.logo {
+  font-size: 1.5rem;
+  color: #ff4444;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px #000;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+.nav-links a {
+  color: #f5f5f5;
+  text-decoration: none;
+  padding: 0.5rem;
+  transition: color 0.3s;
+}
+.nav-links a:hover {
+  color: #ff4444;
+}
+
+/* Hero & Parallax */
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  text-align: center;
+  padding: 0 1rem;
+  background: url("https://source.unsplash.com/1600x900/?cybersecurity,network")
+    center/cover no-repeat;
+  position: relative;
+}
+.parallax {
+  background-attachment: fixed;
+}
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  color: #ff4444;
+  text-shadow: 2px 2px 4px #000;
+}
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+.cta-button {
+  padding: 0.8rem 1.5rem;
+  background: #ff4444;
+  color: #000;
+  text-decoration: none;
+  border-radius: 0.375rem;
+  font-weight: 500;
+  transition: background 0.3s;
+}
+.cta-button:hover {
+  background: #cc0000;
+}
+
+/* Sections */
+.section {
+  padding: 4rem 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+.section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #ff4444;
+}
+.section p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #ccc;
+}
+
+/* Features Cards */
+.features .feature-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+.card {
+  background: #110000;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 10px rgba(255, 68, 68, 0.3);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 20px rgba(255, 68, 68, 0.6);
+}
+.card h3 {
+  margin-bottom: 0.5rem;
+  color: #ff4444;
+}
+.card p {
+  color: #ddd;
+}
+
+.ip-value {
+  color: #fff;
+  font-weight: bold;
+}
+
+/* Map Card */
+.map-card {
+  background: #110000;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 10px rgba(255, 68, 68, 0.3);
+  transition: transform 0.3s;
+}
+.map-card:hover {
+  transform: translateY(-10px);
+}
+
+/* Alert Builder */
+.alert-card .alert-input {
+  width: 100%;
+  padding: 0.5rem;
+  margin: 0.5rem 0;
+  border-radius: 0.25rem;
+  border: 1px solid #333;
+  background: #000;
+  color: #fff;
+}
+.alert-add-button {
+  background: #ff4444;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  margin-bottom: 0.5rem;
+}
+.alert-list {
+  list-style: disc inside;
+  color: #ccc;
+  text-align: left;
+}
+
+/* Stats */
+.stats-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+.stat {
+  background: #110000;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  width: 150px;
+  box-shadow: 0 0 10px rgba(255, 68, 68, 0.3);
+}
+.stat-number {
+  font-size: 2rem;
+  color: #ff4444;
+}
+.stat-label {
+  margin-top: 0.5rem;
+  color: #ccc;
+}
+
+/* Back to Top */
+.back-to-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background: #ff4444;
+  color: #000;
+  border: none;
+  padding: 0.75rem;
+  font-size: 1.25rem;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  transition: background 0.3s;
+}
+.back-to-top:hover {
+  background: #cc0000;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 1rem;
+  background: #110000;
+  color: #666;
+}
+/*--- existing styles above remain unchanged ---*/
+
+/* System Monitor Card */
+.sys-card {
+  background: #110000;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 10px rgba(255, 68, 68, 0.3);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.sys-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 20px rgba(255, 68, 68, 0.6);
+}
+.sys-card h3 {
+  margin-bottom: 0.5rem;
+  color: #ff4444;
+}
+.sys-card p {
+  color: #ddd;
+}
+
+/* Dark Mode Toggle Button */
+.toggle-btn {
+  background: #ff4444;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  color: #000;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+.toggle-btn:hover {
+  background: #cc0000;
+}
+
+/* Theme Variables */
+body.theme-dark {
+  --bg: #111;
+  --fg: #ddd;
+  --accent: #bb2222;
+}
+/* Make sure components use these vars */
+.App {
+  background: var(--bg, #000);
+  color: var(--fg, #f5f5f5);
+}
+.logo,
+.cta-button,
+.stat-number,
+.card h3,
+.sys-card h3 {
+  color: var(--accent, #ff4444);
+}
+.navbar,
+.card,
+.map-card,
+.sys-card,
+.stats-container .stat {
+  background: var(--bg, #110000);
+}
+/* Typing Header */
+.typing-header {
+  font-size: 3rem;
+  color: #ff4444;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.cursor {
+  display: inline-block;
+  animation: blink 1s step-start infinite;
+}
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+/* Latency Checker Card */
+.latency-card {
+  background: #110000;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 10px rgba(255, 68, 68, 0.3);
+  text-align: center;
+}
+.latency-card h3 {
+  color: #ff4444;
+  margin-bottom: 0.5rem;
+}
+.latency-card p {
+  color: #ddd;
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+.latency-card button {
+  background: #ff4444;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  color: #000;
+  transition: background 0.3s;
+}
+.latency-card button:hover {
+  background: #cc0000;
+}
+/* Append to App.css */
+
+/* Packet Rate */
+.packet-card {
+  background: #110000;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 10px rgba(255, 68, 68, 0.3);
+  transition: transform 0.3s;
+}
+.packet-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px rgba(255, 68, 68, 0.6);
+}
+.packet-card h3 {
+  color: #ff4444;
+}
+.packet-card p {
+  color: #ddd;
+  font-size: 1.5rem;
+}
+
+/* Error Log */
+.log-card {
+  background: #110000;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 10px rgba(255, 68, 68, 0.3);
+  height: 200px;
+  overflow-y: auto;
+}
+.log-card h3 {
+  color: #ff4444;
+}
+.log-card ul {
+  list-style: inside disc;
+  color: #ccc;
+  font-size: 0.9rem;
+}
+
+/* Port Scanner */
+.port-card {
+  background: #110000;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 10px rgba(255, 68, 68, 0.3);
+}
+.port-card h3 {
+  color: #ff4444;
+  margin-bottom: 0.5rem;
+}
+.port-card button {
+  background: #ff4444;
+  border: none;
+  color: #000;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.port-card button:hover {
+  background: #cc0000;
+}
+.port-card p {
+  color: #ddd;
+  margin-top: 0.5rem;
+}
