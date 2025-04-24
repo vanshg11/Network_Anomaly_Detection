@@ -1,5 +1,6 @@
 /* =====================
    Anomaly Landing Full CSS (Original + Responsive)
+   Mobile-first Responsive Design
    ===================== */
 
 .App {
@@ -281,7 +282,8 @@ body.theme-dark {
   font-size: 3rem;
   color: #ff4444;
   white-space: nowrap;
-  overflow: hidden;
+  overflow: visible; /* allow full text */
+  width: max-content; /* expand to content */
 }
 .cursor {
   display: inline-block;
@@ -312,11 +314,9 @@ body.theme-dark {
 }
 .latency-card button {
   background: #ff4444;
-  border: none;
+  color: #000;
   padding: 0.5rem 1rem;
   border-radius: 0.25rem;
-  cursor: pointer;
-  color: #000;
   transition: background 0.3s;
 }
 .latency-card button:hover {
@@ -374,11 +374,9 @@ body.theme-dark {
 }
 .port-card button {
   background: #ff4444;
-  border: none;
   color: #000;
   padding: 0.5rem 1rem;
   border-radius: 0.25rem;
-  cursor: pointer;
   transition: background 0.3s;
 }
 .port-card button:hover {
@@ -392,8 +390,6 @@ body.theme-dark {
 /* =====================
      Responsive Media Queries
      ===================== */
-
-/* Mobile-first: default styles apply to smallest screens */
 
 /* Small devices (≥480px) */
 @media (min-width: 480px) {
