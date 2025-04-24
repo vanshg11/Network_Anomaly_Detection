@@ -1,3 +1,7 @@
+/* =====================
+   Anomaly Landing Full CSS (Original + Responsive)
+   ===================== */
+
 .App {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background: #000;
@@ -385,13 +389,18 @@ body.theme-dark {
   margin-top: 0.5rem;
 }
 
-/* --- Responsive Media Queries --- */
+/* =====================
+     Responsive Media Queries
+     ===================== */
 
-/* Mobile (≤ 600px) */
-@media (max-width: 600px) {
+/* Mobile-first: default styles apply to smallest screens */
+
+/* Small devices (≥480px) */
+@media (min-width: 480px) {
   .navbar {
     flex-direction: column;
     align-items: flex-start;
+    padding: 1rem 1.5rem;
   }
   .nav-links {
     flex-direction: column;
@@ -399,61 +408,75 @@ body.theme-dark {
     margin-top: 1rem;
   }
   .hero h1 {
-    font-size: 2rem;
-  }
-  .hero p {
-    font-size: 1rem;
-  }
-  .cta-button {
-    width: 100%;
-    font-size: 1rem;
-  }
-  .features .feature-cards {
-    grid-template-columns: 1fr;
-  }
-  .stats-container {
-    flex-direction: column;
-    align-items: center;
-  }
-  .section h2 {
-    font-size: 2rem;
-  }
-  .section p {
-    font-size: 0.95rem;
-  }
-  .typing-header {
-    font-size: 2rem;
-  }
-  .stat {
-    width: 100%;
-  }
-}
-
-/* Tablet (601px to 1024px) */
-@media (min-width: 601px) and (max-width: 1024px) {
-  .hero h1 {
     font-size: 2.5rem;
   }
   .hero p {
     font-size: 1.1rem;
   }
-  .features .feature-cards {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .stats-container {
-    justify-content: space-around;
-  }
-  .typing-header {
-    font-size: 2.5rem;
+  .cta-button {
+    padding: 0.7rem 1.3rem;
   }
 }
 
-/* Large Screens (≥ 1025px) */
-@media (min-width: 1025px) {
+/* Medium devices (≥768px) */
+@media (min-width: 768px) {
+  .navbar {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+  }
+  .nav-links {
+    flex-direction: row;
+    gap: 1.5rem;
+    margin-top: 0;
+  }
   .features .feature-cards {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(2, minmax(200px, 1fr));
   }
   .stats-container {
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(100px, 1fr));
   }
+  .hero {
+    min-height: 70vh;
+    padding: 2rem;
+  }
+}
+
+/* Large devices (≥1024px) */
+@media (min-width: 1024px) {
+  .features .feature-cards {
+    grid-template-columns: repeat(3, minmax(250px, 1fr));
+  }
+  .stats-container {
+    grid-template-columns: repeat(4, minmax(120px, 1fr));
+  }
+  .section {
+    max-width: 1000px;
+    padding: 4rem 2rem;
+  }
+}
+
+/* Extra-large (≥1440px) */
+@media (min-width: 1440px) {
+  .features .feature-cards {
+    grid-template-columns: repeat(4, minmax(250px, 1fr));
+  }
+  .hero h1 {
+    font-size: 4rem;
+  }
+  .section h2 {
+    font-size: 3rem;
+  }
+}
+
+/* Utility: fluid typography */
+h1 {
+  font-size: clamp(1.5rem, 5vw, 3rem);
+}
+h2 {
+  font-size: clamp(1.25rem, 4vw, 2.5rem);
+}
+p {
+  font-size: clamp(0.9rem, 2.5vw, 1rem);
 }
